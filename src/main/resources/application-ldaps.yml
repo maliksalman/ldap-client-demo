@@ -1,0 +1,3 @@
+spring:
+  ldap:
+    urls: "ldaps://ldap.example.org:636"

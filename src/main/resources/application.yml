@@ -1,0 +1,6 @@
+spring:
+  ldap:
+    base: "dc=springframework,dc=org"
+    urls: "ldap://ldap.example.org:389"
+    password: admin
+    username: cn=admin,dc=springframework,dc=org

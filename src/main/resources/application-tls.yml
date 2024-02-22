@@ -1,0 +1,7 @@
+spring:
+  ssl:
+    bundle:
+      pem:
+        ldap:
+          truststore:
+            certificate: /workspace/certs/ca.crt

@@ -1,0 +1,13 @@
+spring:
+  ssl:
+    bundle:
+      pem:
+        ldap:
+          truststore:
+            certificate: /workspace/certs/ca.crt
+          keystore:
+            certificate: /workspace/certs/client.crt
+            privateKey: /workspace/certs/client.key
+
+
+

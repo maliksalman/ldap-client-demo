@@ -1,0 +1,1 @@
+curl -s localhost:8080/cn/bob; echo
