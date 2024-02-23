@@ -43,7 +43,7 @@ To compile our app and convert it into an OCI (aka Docker) image, run:
 
 ### Run the app image
 
-We can run the app images with multiple spring profiles. Whichever profile we run the application with, after the application is started up, we can invoke it through the following script (it tries to look up a user with `uid=bob` from the LDAP server through our spring-boot application):
+We can run the app image with multiple spring profiles. Whichever profile we run the application with, after the application is started up, we can invoke it through the following script (it tries to look up a user with `uid=bob` from the LDAP server through our spring-boot application):
 
 ```
 ./query-app.sh
