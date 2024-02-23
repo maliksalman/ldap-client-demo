@@ -10,7 +10,7 @@ You need to have the following installed on your system:
 - `openssl`
 - `curl`
 
-## The steps to run the sample application are:
+## Getting Started
 
 There are scripts to start an LDAP server configured with TLS security. The LDAP server is configured with some example data which comes from the [`users.ldif`](./users.ldif) file. The LDAP server listens to both a TLS port (port `636`) and a non-TLS port (port `389`). It supports the *StartTLS* protocol on the non-TLS port - meaning the connection is established un-encrypted and then is upgraded to a TLS connection.
 
