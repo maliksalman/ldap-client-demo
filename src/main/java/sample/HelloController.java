@@ -33,14 +33,14 @@ public class HelloController {
         this.ldap = ldap;
     }
 
-	@GetMapping("/cn/{name}")
-	public List<User> cn(@PathVariable("name") String name) {
+	@GetMapping("/cn/{uid}")
+	public List<User> cn(@PathVariable("uid") String uid) {
 
-		AttributesMapper<User> mapper = attrs -> new User(name,
+		AttributesMapper<User> mapper = attrs -> new User(uid,
 				attrs.get("cn").get().toString(),
 				attrs.get("userPassword").get().toString());
 
-		return this.ldap.search("ou=people", "uid=" + name, mapper);
+		return this.ldap.search("ou=people", "uid=" + uid, mapper);
 	}
 
 	record User(
