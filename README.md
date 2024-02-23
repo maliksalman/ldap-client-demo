@@ -79,7 +79,7 @@ In this profile, the client communication happens encrypted on port `636`. The C
 ./run-app-image.sh tls
 ```
 
-In this profile, the client communication is initiated un-encrypted on port `389` but is upgraded to TLS through the *StartTLS* mechanism. The CA cert used by the LDAP server is loaded in the app container using spring-boot's SSL bundle mechanism. There is no need to add our CA to the JDK's truststore in this case. Notice the log output shown in the LDAP server's docker container output.
+In this profile, the client communication is initiated un-encrypted on port `389` but is upgraded to TLS through the *StartTLS* mechanism. The CA cert used by the LDAP server is loaded in the app container using spring-boot's SSL bundle mechanism. There is no need to add our CA to the JDK's truststore in this case. The SSL  bundle information is injected into a [`LdapContextSource` bean](./src/main/java/sample/TLSConfig.java) which helps configure the `LdapTemplte`. Notice the log output shown in the LDAP server's docker container output.
 
 #### ... with `mutualtls` profile
 
@@ -87,4 +87,4 @@ In this profile, the client communication is initiated un-encrypted on port `389
 ./run-app-image.sh mutualtls
 ```
 
-In this profile, the client communication is initiated un-encrypted on port `389` but is upgraded to mutual TLS through the *StartTLS* mechanism. The CA cert used by the LDAP server and a client key/cert are loaded in the app container using spring-boot's SSL bundle mechanism. There is no need to add our CA to the JDK's truststore in this case. Notice the log output shown in the LDAP server's docker container output.
+In this profile, the client communication is initiated un-encrypted on port `389` but is upgraded to mutual TLS through the *StartTLS* mechanism. The CA cert used by the LDAP server and a client key/cert are loaded in the app container using spring-boot's SSL bundle mechanism. There is no need to add our CA to the JDK's truststore in this case. The SSL  bundle information is injected into a [`LdapContextSource` bean](./src/main/java/sample/TLSConfig.java) which helps configure the `LdapTemplte`. Notice the log output shown in the LDAP server's docker container output.
