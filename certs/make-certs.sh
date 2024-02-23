@@ -31,6 +31,9 @@ make_key_and_cert() {
   cp ca.crt $NAME/
 }
 
+# lets be in the directory where this script lives
+cd $(dirname $0)
+
 # cleanup first
 rm *.crt
 rm *.key

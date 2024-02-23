@@ -5,7 +5,7 @@
 DOCKER_HOST_IP_WITHIN_CONTAINER=$(docker run -it --rm maliksalman/jump:latest nslookup host.docker.internal | grep Name -A 1 | grep Address | cut -d ' ' -f 2)
 
 # figure out which spring-profile to run with
-PROFILE="${1:-ldaps}"
+PROFILE="${1:-default}"
 
 # run the container
 if [[ $PROFILE == "ldaps" ]]; then
